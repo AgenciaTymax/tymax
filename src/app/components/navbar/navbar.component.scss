@@ -1,0 +1,57 @@
+.app-nav {
+    background-color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+    img {
+        margin-left: 60px;
+
+        @media only screen and (max-width: 600px) {
+            margin-left: 6px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        margin: 10px;
+        transition: color 0.3s ease;
+    
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: center;
+    
+        &:hover {
+          color: #FF3366; 
+        }
+    }
+
+    div {
+        display: block; 
+
+        @media only screen and (max-width: 600px) {
+            display: none; 
+        }
+    }
+
+    button {
+        display: none; 
+
+        @media only screen and (max-width: 600px) {
+            display: block; 
+            margin-right: 6px;
+        }
+    }
+
+    mat-menu {
+        @media only screen and (min-width: 601px) {
+            display: none; 
+        }
+    }
+}
