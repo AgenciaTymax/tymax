@@ -9,6 +9,10 @@
 
     img {
         margin-left: 60px;
+
+        @media only screen and (max-width: 600px) {
+            margin-left: 6px;
+        }
     }
 
     a {
@@ -24,7 +28,30 @@
         text-align: center;
     
         &:hover {
-          color: #FF3366; // Cor ao passar o mouse
+          color: #FF3366; 
+        }
+    }
+
+    div {
+        display: block; 
+
+        @media only screen and (max-width: 600px) {
+            display: none; 
+        }
+    }
+
+    button {
+        display: none; 
+
+        @media only screen and (max-width: 600px) {
+            display: block; 
+            margin-right: 6px;
+        }
+    }
+
+    mat-menu {
+        @media only screen and (min-width: 601px) {
+            display: none; 
         }
     }
 }

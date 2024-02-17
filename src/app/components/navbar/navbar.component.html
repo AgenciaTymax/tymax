@@ -1,9 +1,20 @@
-<nav class="app-nav">
-    <img alt="Logo Tymax" ngSrc="./assets/logo.png" width="60" height="30" />
+<nav class='app-nav'>
+    <img alt='Logo Tymax' ngSrc='./assets/logo.png' width='60' height='30' />
+
     <div>
-        <a href="#">Início</a>
-        <a href="#">Quem Somos</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href='/'>Início</a>
+        <a href='/sobre'>Quem Somos</a>
+        <a href='/servicos'>Serviços</a>
+        <a href='/contato'>Contato</a>
     </div>
+
+    <button mat-icon-button [matMenuTriggerFor]='menu'>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu='matMenu'>
+        <a mat-menu-item href='/'>Início</a>
+        <a mat-menu-item href='/sobre'>Quem Somos</a>
+        <a mat-menu-item href='/servicos'>Serviços</a>
+        <a mat-menu-item href='/contato'>Contato</a>
+    </mat-menu>
 </nav>
