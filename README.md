@@ -1,40 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tymax - LP
 
-## Getting Started
+[Tymax – Figma](https://www.figma.com/file/spRNNtE4hSnoyckAknWTet/Tymax?type=design&node-id=0-1&mode=design&t=Ztd0sDb686OyYVKf-0)
 
-First, run the development server:
+## Instalação
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Clone este repositório em sua máquina local:
+
+```
+git clone https://github.com/your-username/tymax.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navegue até o diretório do projeto:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+cd tymax
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Instale as dependências utilizando o Yarn e assegure-se de que a versão do Node.js é 20.11.0:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Nota:** Certifique-se de que a versão do Node.js é 20.11.0.
 
-## Learn More
+## Uso
 
-To learn more about Next.js, take a look at the following resources:
+### Desenvolvimento
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para iniciar o servidor de desenvolvimento, execute:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+yarn run dev
+```
 
-## Deploy on Vercel
+Isso iniciará o servidor de desenvolvimento do Next.js, permitindo que você faça alterações no código e veja as atualizações em tempo real.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Construção
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Para construir o projeto para produção, execute:
+
+```bash
+yarn run build
+```
+
+Este comando irá compilar o projeto e criar uma compilação otimizada para produção no diretório `/.next`.
+
+### Inicialização
+
+Para iniciar o servidor de produção, execute:
+
+```bash
+yarn start
+```
+
+Isso servirá a compilação de produção do projeto.
+
+### Linting
+
+Para executar o ESLint para linting de código, use:
+
+```bash
+yarn run lint
+```
+
+## Tecnologias Utilizadas
+
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- ESLint
