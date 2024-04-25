@@ -7,7 +7,8 @@
 1. Clone este repositório em sua máquina local:
 
 ```
-git clone https://github.com/your-username/tymax.git
+
+git clone https://github.com/AgenciaTymax/tymax.git
 ```
 
 2. Navegue até o diretório do projeto:
