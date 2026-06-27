@@ -37,9 +37,7 @@ export default function HeadlineSection() {
         &amp; Criatividade
       </h2>
       <p className="headline-body fade-in">
-        Nossas soluções fortalecem a presença digital da sua empresa, aproximam
-        seu público e transmitem profissionalismo. Tudo isso com{' '}
-        <strong style={{ color: 'var(--magenta)' }}>estratégia &amp; criatividade</strong>.
+        Acreditamos que cada marca tem uma história pra contar e o nosso trabalho é transformar isso em conteúdo estratégico, que realmente se conecta com as pessoas certas.
       </p>
     </section>
   );

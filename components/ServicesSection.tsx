@@ -35,12 +35,8 @@ const services = [
 ];
 
 const tickerItems = Array(8).fill([
-  'Social Media',
-  'Design',
-  'Tráfego Pago',
-  'Criação de Sites',
-  'Audiovisual',
-  'Lançamentos',
+  '@agenciatymax',
+  'marketing de conteúdo'
 ]).flat();
 
 export default function ServicesSection() {
@@ -70,14 +66,7 @@ export default function ServicesSection() {
           <div className="fade-in">
             <h2
               id="services-heading"
-              style={{
-                fontSize: 'clamp(3.5rem, 9vw, 7rem)',
-                fontWeight: 900,
-                textTransform: 'uppercase',
-                lineHeight: 1,
-                color: 'var(--off-white)',
-                letterSpacing: '-0.02em',
-              }}
+              className="services-title"
             >
               Nossas
               <br />
@@ -85,10 +74,10 @@ export default function ServicesSection() {
             </h2>
           </div>
           <p className="services-description fade-in">
-            Nossas soluções fortalecem a <strong>presença digital</strong> da sua
+            Nossas soluções fortalecem a presença digital da sua
             empresa, aproximam seu público e transmitem{' '}
-            <strong>profissionalismo</strong>. Tudo isso com estratégia &amp;
-            criatividade.
+            profissionalismo. Tudo isso com <strong>estratégia</strong> &amp;{' '}
+            <strong>criatividade</strong>.
           </p>
         </div>
 

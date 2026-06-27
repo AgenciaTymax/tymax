@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('/fonts/helvetica-now-display/stylesheet.css');
+@import url('/fonts/helvetica-now-text/stylesheet.css');
 
 :root {
   --charcoal: #1e1e1e;
-  --magenta: #f72585;
-  --magenta-dark: #c9184a;
+  --magenta: #fd98cf;
+  --pink-dark: #f51472;
   --pink-light: #fce4ec;
-  --neon-yellow: #d4ff00;
+  --neon-yellow: #e3f863;
   --deep-violet: #2b2d8e;
-  --off-white: #f5f0e8;
+  --yellow-gold: #fffdef;
   --white: #ffffff;
   --black: #0d0d0d;
   --text-muted: #aaaaaa;
@@ -24,8 +26,12 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  font-family: 'Helvetica Now Display', sans-serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Helvetica Now Text', sans-serif;
   background: var(--charcoal);
   color: var(--white);
   overflow-x: hidden;
@@ -100,7 +106,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   opacity: 0.85;
 }
 
@@ -180,7 +186,7 @@ body {
 /* ─── SERVICES SECTION ────────────────────────── */
 .services-section {
   background: var(--charcoal);
-  padding: 5rem 2.5rem 0;
+  padding: 5rem 2.5rem 4rem;
 }
 
 .services-header {
@@ -189,6 +195,21 @@ body {
   gap: 3rem;
   align-items: start;
   margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.services-title {
+  font-family: 'Helvetica Now Display', sans-serif;
+  font-size: clamp(3.5rem, 9.5vw, 8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.85;
+  color: var(--yellow-gold);
+  letter-spacing: -0.04em;
+  position: relative;
+  z-index: 10;
 }
 
 .services-title-img {
@@ -202,33 +223,51 @@ body {
   line-height: 1.8;
   opacity: 0.85;
   padding-top: 0.5rem;
+  pointer-events: auto;
 }
 
 .services-description strong {
-  color: var(--magenta);
+  color: var(--pink-dark);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
+  gap: 1.25rem;
   background: var(--charcoal);
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  .services-grid {
+    margin-top: -7.5rem;
+  }
 }
 
 .service-card {
-  background: var(--magenta);
+  background: var(--pink-dark);
   padding: 2.2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: transform 0.25s, background 0.25s;
+  border-radius: 12px;
+  transition: transform 0.25s, background 0.25s, box-shadow 0.25s;
   cursor: default;
+  object-fit: cover;
+}
+
+@media (min-width: 769px) {
+  .service-card:nth-child(-n+3) {
+    padding-top: 6rem;
+  }
 }
 
 .service-card:hover {
-  background: var(--magenta-dark);
+  background: var(--pink-dark);
   transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
   z-index: 2;
   position: relative;
 }
@@ -238,12 +277,12 @@ body {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--black);
 }
 
 .service-card-text {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.65;
 }
 
@@ -270,7 +309,7 @@ body {
 }
 
 .ticker-item::before {
-  content: '★';
+  content: '•';
   margin-right: 1rem;
 }
 
@@ -363,7 +402,7 @@ body {
 }
 
 .contact-content {
-  background: var(--pink-light);
+  background: var(--magenta);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,7 +415,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--magenta-dark);
+  color: var(--pink-dark);
   opacity: 0.7;
 }
 
@@ -393,15 +432,15 @@ body {
 }
 
 .contact-body strong {
-  color: var(--magenta-dark);
+  color: var(--pink-dark);
 }
 
 .contact-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--magenta);
-  color: var(--white);
+  background: var(--pink-dark);
+  color: var(--black);
   text-decoration: none;
   padding: 1rem 2.2rem;
   border-radius: 4px;
@@ -416,7 +455,7 @@ body {
 }
 
 .contact-cta:hover {
-  background: var(--magenta-dark);
+  background: var(--pink-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(247,37,133,0.5);
   animation: none;
@@ -438,7 +477,6 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--charcoal);
   display: flex;
   align-items: center;
   justify-content: center;

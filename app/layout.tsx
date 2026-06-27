@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Conectamos marcas e pessoas com estratégia e criatividade. Social Media, Tráfego Pago, Design, Sites e muito mais.',
     images: [
       {
-        url: '/images/hero-photo.png',
+        url: '/images/hero-photo.jpg',
         width: 1200,
         height: 630,
         alt: 'Agência Tymax - Conectando marcas e pessoas',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Agência Tymax | Marketing Digital',
     description:
       'Conectamos marcas e pessoas com estratégia e criatividade.',
-    images: ['/images/hero-photo.png'],
+    images: ['/images/hero-photo.jpg'],
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export default function RootLayout({
               '@type': 'Organization',
               name: 'Agência Tymax',
               url: 'https://agenciatymax.com.br',
-              logo: 'https://agenciatymax.com.br/images/hero-photo.png',
+              logo: 'https://agenciatymax.com.br/images/hero-photo.jpg',
               description:
                 'Agência de marketing digital especializada em social media, tráfego pago, design, criação de sites, audiovisual e lançamentos.',
               sameAs: [
