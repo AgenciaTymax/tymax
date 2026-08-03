@@ -34,11 +34,6 @@ const services = [
   },
 ];
 
-const tickerItems = Array(8).fill([
-  '@agenciatymax',
-  'marketing de conteúdo'
-]).flat();
-
 export default function ServicesSection() {
   const ref = useRef<HTMLElement>(null);
 
@@ -93,22 +88,6 @@ export default function ServicesSection() {
               <h3 className="service-card-title">{svc.title}</h3>
               <p className="service-card-text">{svc.text}</p>
             </article>
-          ))}
-        </div>
-      </div>
-
-      {/* Ticker */}
-      <div className="ticker-wrap" aria-hidden="true">
-        <div className="ticker-track">
-          {tickerItems.map((item, i) => (
-            <span key={i} className="ticker-item">
-              {item}
-            </span>
-          ))}
-          {tickerItems.map((item, i) => (
-            <span key={`dup-${i}`} className="ticker-item">
-              {item}
-            </span>
           ))}
         </div>
       </div>

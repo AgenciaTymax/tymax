@@ -42,6 +42,21 @@ export default function ContactSection() {
 
       {/* Content right */}
       <div className="contact-content fade-in">
+        {/* Logo TY+ */}
+        <p
+          aria-label="Agência Tymax"
+          style={{
+            fontFamily: "'Helvetica Now Display', sans-serif",
+            fontSize: 'clamp(2rem, 4vw, 2.8rem)',
+            fontWeight: 900,
+            color: 'var(--pink-dark)',
+            letterSpacing: '-0.02em',
+            lineHeight: 1,
+          }}
+        >
+          Ty<sup style={{ fontSize: '0.55em', verticalAlign: 'super' }}>+</sup>
+        </p>
+
         <h2
           id="contact-heading"
           style={{

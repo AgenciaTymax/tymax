@@ -23,6 +23,11 @@ const cases = [
   },
 ];
 
+const tickerItems = Array(8).fill([
+  '@agenciatymax',
+  'marketing de conteúdo'
+]).flat();
+
 export default function CasesSection() {
   const ref = useRef<HTMLElement>(null);
 
@@ -46,6 +51,14 @@ export default function CasesSection() {
       aria-labelledby="cases-heading"
       ref={ref}
     >
+      {/* Glow blob neon atrás do título */}
+      <div
+        className="glow-blob glow-blob--neon"
+        aria-hidden="true"
+        style={{ width: '700px', height: '700px', top: '-100px', left: '50%', transform: 'translateX(-50%)' }}
+      />
+
+      {/* Título superdimensionado */}
       <div className="cases-header fade-in">
         <h2
           id="cases-heading"
@@ -56,6 +69,8 @@ export default function CasesSection() {
             lineHeight: 1,
             color: 'var(--neon-yellow)',
             letterSpacing: '-0.03em',
+            position: 'relative',
+            zIndex: 1,
           }}
           aria-label="Cases — Portfólio de trabalhos"
         >
@@ -63,10 +78,28 @@ export default function CasesSection() {
         </h2>
       </div>
 
+      {/* Ticker — movido da ServicesSection */}
+      <div className="ticker-wrap" aria-hidden="true">
+        <div className="ticker-track">
+          {tickerItems.map((item, i) => (
+            <span key={i} className="ticker-item">
+              {item}
+            </span>
+          ))}
+          {tickerItems.map((item, i) => (
+            <span key={`dup-${i}`} className="ticker-item">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Galeria de cases */}
       <div
         className="cases-grid"
         role="list"
         aria-label="Portfólio de cases da Agência Tymax"
+        style={{ marginTop: '3rem' }}
       >
         {cases.map((c) => (
           <article
