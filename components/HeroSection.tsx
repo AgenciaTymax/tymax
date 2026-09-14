@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* Background image */}
       <Image
         src="/images/hero-photo.jpg"
-        alt="Especialista da Agência Tymax segurando caneca com logo Ty+"
+        alt="Especialista da Agência Tymax"
         fill
         priority
         quality={90}
@@ -36,6 +36,7 @@ export default function HeroSection() {
         sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
+      <div className="hero-texture" aria-hidden="true" />
       <div className="hero-overlay" aria-hidden="true" />
 
       {/* Glow blob decorativo */}
@@ -52,18 +53,26 @@ export default function HeroSection() {
           Ty<sup>+</sup>
         </p>
 
+        <span className="hero-badge fade-in">Marketing &amp; Estratégia Digital</span>
+
         <h1 className="hero-title fade-in">
-          Conectamos marcas<br />
-          e pessoas com{' '}
-          <span>estratégia</span><br />
-          <span>&amp; criatividade.</span>
+          Transformamos ideias<br />
+          em presença digital<br />
+          de <span>verdadeiro impacto.</span>
         </h1>
 
         <p className="hero-sub fade-in">
-          Do conteúdo ao resultado. Trabalhamos para fortalecer a presença
-          digital da sua marca com autenticidade e propósito.
+          Do planejamento à execução: posicionamento, conteúdo e criatividade para marcas que querem se destacar com autenticidade.
         </p>
+
+        <a href="#sobre" className="hero-scroll-btn fade-in" aria-label="Conheça a proposta da Agência Tymax">
+          <span>Conheça a Tymax</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+          </svg>
+        </a>
       </div>
     </section>
   );
 }
+

@@ -105,7 +105,79 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <svg
+          width="0"
+          height="0"
+          className="sr-only"
+          aria-hidden="true"
+          style={{ position: 'absolute', width: 0, height: 0, pointerEvents: 'none' }}
+        >
+          <defs>
+            <filter
+              id="text-spray-texture"
+              x="-15%"
+              y="-15%"
+              width="130%"
+              height="130%"
+              colorInterpolationFilters="sRGB"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.75"
+                numOctaves="4"
+                result="noise"
+              />
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="noise"
+                scale="3.5"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="disp"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0.65"
+                in="noise"
+                result="grain"
+              />
+              <feComposite in="disp" in2="grain" operator="in" />
+            </filter>
+            <filter
+              id="cases-spray-texture"
+              x="-15%"
+              y="-15%"
+              width="130%"
+              height="130%"
+              colorInterpolationFilters="sRGB"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.65"
+                numOctaves="4"
+                result="noise"
+              />
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="noise"
+                scale="5"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="disp"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.32 0.68"
+                in="noise"
+                result="grain"
+              />
+              <feComposite in="disp" in2="grain" operator="in" />
+            </filter>
+          </defs>
+        </svg>
+        {children}
+      </body>
     </html>
   );
 }

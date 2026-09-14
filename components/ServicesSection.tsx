@@ -4,32 +4,32 @@ import { useEffect, useRef } from 'react';
 const services = [
   {
     id: 'social-media',
-    title: 'Social Media',
+    title: 'SOCIAL MEDIA',
     text: 'Planejamento estratégico, criação de conteúdo e acompanhamento de cada detalhe para sua marca se destacar com autenticidade.',
   },
   {
     id: 'design',
-    title: 'Design',
-    text: 'Cada detalhe é pensado para reforçar a identidade da sua marca. Criamos materiais estratégicos que conversam com o público certo.',
+    title: 'DESIGN',
+    text: 'Cada detalhe é pensado para reforçar a identidade da sua marca. Criamos materiais estratégicos e que conversam com o público certo.',
   },
   {
     id: 'trafego-pago',
-    title: 'Tráfego Pago',
+    title: 'TRÁFEGO PAGO',
     text: 'Do planejamento à otimização dos anúncios, acompanhamos cada detalhe pra transformar cliques em resultados reais.',
   },
   {
     id: 'criacao-sites',
-    title: 'Criação de Sites',
+    title: 'CRIAÇÃO DE SITES',
     text: 'Desenvolvemos sites e landing pages que refletem a identidade da sua marca e entregam resultado de verdade.',
   },
   {
     id: 'audiovisual',
-    title: 'Audiovisual',
+    title: 'AUDIOVISUAL',
     text: 'Transformamos ideias em experiências. Captações de fotos e vídeos que mostram o que sua marca tem de mais real.',
   },
   {
     id: 'criacao-lancamento',
-    title: 'Criação e Lançamento',
+    title: 'CRIAÇÃO E LANÇAMENTO',
     text: 'Toda boa ideia precisa de direção. Planejamos campanhas, lançamentos e estratégias completas pra sua marca se posicionar com clareza e propósito.',
   },
 ];

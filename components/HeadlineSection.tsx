@@ -28,13 +28,13 @@ export default function HeadlineSection() {
         id="headline-title"
         className="headline-main fade-in"
       >
-        Conectando
+        CONECTANDO
         <br />
-        Marcas e Pessoas
+        MARCAS E PESSOAS
         <br />
-        com Estratégia
+        COM ESTRATÉGIA
         <br />
-        &amp; Criatividade
+        &amp; CRIATIVIDADE
       </h2>
       <p className="headline-body fade-in">
         Acreditamos que cada marca tem uma história pra contar e o nosso trabalho é transformar isso em conteúdo estratégico, que realmente se conecta com as pessoas certas.

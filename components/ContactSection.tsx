@@ -42,44 +42,21 @@ export default function ContactSection() {
 
       {/* Content right */}
       <div className="contact-content fade-in">
-        {/* Logo TY+ */}
-        <p
-          aria-label="Agência Tymax"
-          style={{
-            fontFamily: "'Helvetica Now Display', sans-serif",
-            fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-            fontWeight: 900,
-            color: 'var(--pink-dark)',
-            letterSpacing: '-0.02em',
-            lineHeight: 1,
-          }}
-        >
-          Ty<sup style={{ fontSize: '0.55em', verticalAlign: 'super' }}>+</sup>
-        </p>
-
-        <h2
-          id="contact-heading"
-          style={{
-            fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
-            fontWeight: 900,
-            textTransform: 'uppercase',
-            lineHeight: 0.95,
-            color: 'var(--pink-dark)',
-            letterSpacing: '-0.02em',
-          }}
-        >
-          Fale Com<br />A Gente
-        </h2>
+        <div className="contact-heading-wrap">
+          <h2
+            id="contact-heading"
+            className="contact-heading"
+          >
+            FALE COM<br />A GENTE
+          </h2>
+        </div>
 
         <p className="contact-body">
-          Nosso trabalho será direcionado para fortalecer a presença
-          digital da marca, aproximar o público-alvo e transmitir
-          profissionalismo através de uma{' '}
-          comunicação estratégica e atrativa.
+          nosso trabalho será direcionado para fortalecer a presença digital da marca, aproximar o público-alvo e transmitir profissionalismo através de uma comunicação estratégica e atrativa.
         </p>
 
-        <p className="contact-body" style={{ marginTop: '-0.5rem' }}>
-          Quer saber mais sobre os nossos serviços?
+        <p className="contact-body contact-body--query">
+          quer saber mais sobre os nossos serviços?
         </p>
 
         <a
@@ -90,7 +67,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           aria-label="Solicitar orçamento via WhatsApp"
         >
-          Solicite Seu Orçamento
+          SOLICITE SEU ORÇAMENTO
         </a>
 
         {/* Social links */}
@@ -135,7 +112,7 @@ export default function ContactSection() {
           </a>
 
           <a
-            href="mailto:contato@agenciatymax.com.br"
+            href="mailto:tymaxmidias@gmail.com"
             className="social-link"
             id="social-email"
             aria-label="E-mail da Agência Tymax"

@@ -13,8 +13,8 @@ export default function Footer() {
           Agência Tymax
         </a>{' '}
         · Todos os direitos reservados ·{' '}
-        <a href="mailto:contato@agenciatymax.com.br">
-          contato@agenciatymax.com.br
+        <a href="mailto:tymaxmidias@gmail.com">
+          tymaxmidias@gmail.com
         </a>
       </p>
     </footer>
