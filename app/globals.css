@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('/fonts/helvetica-now-display/stylesheet.css');
 @import url('/fonts/helvetica-now-text/stylesheet.css');
 
 :root {
+  /* Typography tokens */
+  --font-display: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Helvetica Now', 'Helvetica Now Text', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: 'Open Sans', 'Helvetica Now', -apple-system, BlinkMacSystemFont, sans-serif;
+
   --charcoal: #1e1e1e;
   --headline-pink: #fd98cf;
   --magenta: #ffa0c8;
@@ -33,11 +38,11 @@ html {
 }
 
 h1, h2, h3 {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
 }
 
 body {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   background: var(--charcoal);
   color: var(--white);
   overflow-x: hidden;
@@ -61,7 +66,7 @@ body {
 }
 
 .navbar-logo {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 900;
   color: var(--headline-pink);
@@ -142,14 +147,14 @@ body {
   position: relative;
   z-index: 2;
   padding: 3rem 2.5rem;
-  max-width: 720px;
+  max-width: 960px;
 }
 
 .hero-badge {
   display: inline-block;
   background: var(--pink-dark);
   color: var(--white);
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.15em;
@@ -160,12 +165,22 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-size: clamp(2.1rem, 4.6vw, 4.1rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 1.2rem;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .hero-title-line {
+    white-space: nowrap;
+  }
 }
 
 .hero-title span {
@@ -181,7 +196,7 @@ body {
 }
 
 .hero-logo {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.6rem, 5vw, 3.8rem);
   font-weight: 900;
   color: var(--headline-pink);
@@ -232,7 +247,7 @@ body {
 }
 
 .headline-main {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.8rem, 7.5vw, 6.8rem);
   font-weight: 900;
   line-height: 1.02;
@@ -248,7 +263,7 @@ body {
 }
 
 .headline-body {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 400;
   color: var(--white);
@@ -277,7 +292,7 @@ body {
 }
 
 .services-title {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(3.5rem, 8vw, 7.5rem);
   font-weight: 900;
   text-transform: uppercase;
@@ -289,7 +304,7 @@ body {
 }
 
 .services-description {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   font-weight: 700;
   color: var(--white);
@@ -331,7 +346,7 @@ body {
 }
 
 .service-card-title {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: 0.02em;
@@ -340,7 +355,7 @@ body {
 }
 
 .service-card-text {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--off-white);
   line-height: 1.6;
@@ -361,7 +376,7 @@ body {
 }
 
 .ticker-item {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 800;
   color: var(--black);
@@ -397,7 +412,7 @@ body {
 }
 
 .cases-title {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(5.5rem, 16vw, 13rem);
   font-weight: 900;
   text-transform: uppercase;
@@ -480,7 +495,7 @@ body {
 }
 
 .contact-heading {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(3rem, 6.5vw, 5.8rem);
   font-weight: 900;
   text-transform: uppercase;
@@ -492,7 +507,7 @@ body {
 }
 
 .contact-body {
-  font-family: 'Helvetica Now Text', sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   color: var(--black);
   line-height: 1.65;
@@ -501,7 +516,8 @@ body {
 
 .contact-body--query {
   margin-top: -0.5rem;
-  font-weight: 500;
+  font-family: var(--font-secondary);
+  font-weight: 600;
 }
 
 .contact-cta {
@@ -510,7 +526,7 @@ body {
   justify-content: center;
   background: var(--pink-dark);
   color: var(--black);
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(0.9rem, 1.4vw, 1.15rem);
   letter-spacing: 0.04em;
@@ -555,6 +571,7 @@ body {
 
 /* ─── FOOTER ──────────────────────────────────── */
 .footer {
+  font-family: var(--font-secondary);
   background: var(--charcoal);
   text-align: center;
   padding: 2rem;
@@ -689,6 +706,10 @@ body {
 @media (max-width: 480px) {
   .hero-content {
     padding: 2rem 1.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
   }
 
   .headline-main {

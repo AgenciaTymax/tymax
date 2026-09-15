@@ -41,7 +41,7 @@ export default function HeroSection() {
 
       {/* Glow blob decorativo */}
       <div
-        className="glow-blob glow-blob--neon"
+        className="glow-blob"
         aria-hidden="true"
         style={{ width: '500px', height: '500px', top: '-80px', right: '5%' }}
       />
@@ -56,9 +56,11 @@ export default function HeroSection() {
         <span className="hero-badge fade-in">Marketing &amp; Estratégia Digital</span>
 
         <h1 className="hero-title fade-in">
-          Transformamos ideias<br />
-          em presença digital<br />
-          de <span>verdadeiro impacto.</span>
+          <span className="hero-title-line">Transformamos ideias</span>
+          <span className="hero-title-line">em presença digital</span>
+          <span className="hero-title-line">
+            de <span>verdadeiro impacto.</span>
+          </span>
         </h1>
 
         <p className="hero-sub fade-in">
@@ -68,7 +70,7 @@ export default function HeroSection() {
         <a href="#sobre" className="hero-scroll-btn fade-in" aria-label="Conheça a proposta da Agência Tymax">
           <span>Conheça a Tymax</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
           </svg>
         </a>
       </div>
