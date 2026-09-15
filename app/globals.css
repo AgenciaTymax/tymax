@@ -183,7 +183,7 @@ body {
   }
 }
 
-.hero-title span {
+.hero-title-line > span {
   color: var(--headline-pink);
 }
 
