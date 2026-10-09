@@ -1,19 +1,9 @@
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
-    <footer className="footer" role="contentinfo">
-      <p>
-        © {year}{' '}
-        <a
-          href="https://www.instagram.com/agenciatymax"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram Agência Tymax"
-        >
-          Agência Tymax
-        </a>{' '}
-        · Todos os direitos reservados ·{' '}
-        <a href="mailto:tymaxmidias@gmail.com">
+    <footer className="footer-pdf" role="contentinfo">
+      <p className="footer-pdf-text">
+        © 2026 <strong>Agência Tymax</strong> · Todos os direitos reservados ·{' '}
+        <a href="mailto:tymaxmidias@gmail.com" className="footer-pdf-email">
           tymaxmidias@gmail.com
         </a>
       </p>

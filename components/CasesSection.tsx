@@ -7,25 +7,22 @@ const cases = [
     id: 'case-1',
     src: '/images/case-1.jpg',
     alt: 'Case Tymax: sessão de fotos para cliente de bem-estar e terapia',
-    label: 'Bem-estar & Lifestyle',
   },
   {
     id: 'case-2',
     src: '/images/case-2.jpg',
-    alt: 'Case Tymax: conteúdo lifestyle para marca de produtos fitness',
-    label: 'Lifestyle & Fitness',
+    alt: 'Case Tymax: conteúdo lifestyle e fitness',
   },
   {
     id: 'case-3',
     src: '/images/case-3.png',
-    alt: 'Case Tymax: campanha de lançamento VLC Tours — O que ninguém te conta antes de visitar Valência',
-    label: 'Lançamento & Campanha',
+    alt: 'Case Tymax: campanha VLC Tours ValenCasa',
   },
 ];
 
 const tickerItems = Array(8).fill([
   '@agenciatymax',
-  'marketing de conteúdo'
+  'marketing de conteúdo •'
 ]).flat();
 
 export default function CasesSection() {
@@ -51,7 +48,7 @@ export default function CasesSection() {
       aria-labelledby="cases-heading"
       ref={ref}
     >
-      {/* Ticker no topo da seção, exatamente como no Slide 4 do PDF */}
+      {/* Ticker / Faixa animada superior */}
       <div className="ticker-wrap" aria-hidden="true">
         <div className="ticker-track">
           {tickerItems.map((item, i) => (
@@ -67,47 +64,40 @@ export default function CasesSection() {
         </div>
       </div>
 
-      {/* Glow blob decorativo */}
-      <div
-        className="glow-blob glow-blob--neon"
-        aria-hidden="true"
-        style={{ width: '600px', height: '600px', top: '10%', left: '50%', transform: 'translateX(-50%)' }}
-      />
-
-      {/* Título CASES superdimensionado */}
-      <div className="cases-header fade-in">
-        <h2
-          id="cases-heading"
-          className="cases-title"
-          aria-label="Cases — Portfólio de trabalhos"
-        >
-          CASES
-        </h2>
-      </div>
-
-      {/* Galeria de cases contínua */}
-      <div
-        className="cases-grid"
-        role="list"
-        aria-label="Portfólio de cases da Agência Tymax"
-      >
-        {cases.map((c) => (
-          <article
-            key={c.id}
-            id={c.id}
-            className="case-item fade-in"
-            role="listitem"
+      <div className="cases-body">
+        {/* Título CASES em amarelo neon colossal */}
+        <div className="cases-header fade-in">
+          <h2
+            id="cases-heading"
+            className="cases-title"
           >
-            <Image
-              src={c.src}
-              alt={c.alt}
-              fill
-              quality={90}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              style={{ objectFit: 'cover' }}
-            />
-          </article>
-        ))}
+            CASES
+          </h2>
+        </div>
+
+        {/* Galeria de 3 fotos lado a lado */}
+        <div
+          className="cases-grid"
+          role="list"
+          aria-label="Portfólio de cases da Agência Tymax"
+        >
+          {cases.map((c) => (
+            <div
+              key={c.id}
+              className="case-item fade-in"
+              role="listitem"
+            >
+              <Image
+                src={c.src}
+                alt={c.alt}
+                fill
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -52,27 +52,23 @@ export default function ServicesSection() {
 
   return (
     <section
-      id="servicos"
+      id="solucoes"
+      className="services-section-wrapper"
       aria-labelledby="services-heading"
       ref={ref}
     >
       <div className="services-section">
         <div className="services-header">
           <div className="fade-in">
-            <h2
-              id="services-heading"
-              className="services-title"
-            >
-              Nossas
+            <h2 id="services-heading" className="services-title">
+              NOSSAS
               <br />
-              Soluções
+              SOLUÇÕES
             </h2>
           </div>
           <p className="services-description fade-in">
-            Nossas soluções fortalecem a presença digital da sua
-            empresa, aproximam seu público e transmitem{' '}
-            profissionalismo. Tudo isso com <strong>estratégia</strong> &amp;{' '}
-            <strong>criatividade</strong>.
+            Nossas soluções fortalecem a presença digital da sua empresa, aproximam seu público e transmitem profissionalismo. Tudo isso com{' '}
+            <span className="services-highlight">estratégia &amp; criatividade</span>.
           </p>
         </div>
 
@@ -83,7 +79,6 @@ export default function ServicesSection() {
               id={`service-${svc.id}`}
               className="service-card fade-in"
               role="listitem"
-              aria-label={`Serviço: ${svc.title}`}
             >
               <h3 className="service-card-title">{svc.title}</h3>
               <p className="service-card-text">{svc.text}</p>
